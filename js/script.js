@@ -1,6 +1,6 @@
 
 window.onload = function () {
-  const URL = "https://demos.geprom.com/datos.php";
+  const URL = "https://corsproxy.io/?" + encodeURIComponent("https://demos.geprom.com/datos.php");;
 
   //declarar los divs de las cantidades
   const THUMBS_DIV = document.getElementById("thumbs-ammount");
