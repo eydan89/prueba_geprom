@@ -1,0 +1,220 @@
+body {
+    background: rgb(240, 226, 233);
+    background: linear-gradient(90deg, rgba(240, 226, 233, 1) 0%, rgba(195, 211, 224, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+}
+
+header,
+h1,
+h2 {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    color: rgb(125, 96, 222);
+    font-style: oblique
+}
+
+h1 {
+
+    font-size: calc(20px + 1.2vw);
+}
+
+h2 {
+
+    font-size: calc(15px + 1vw);
+
+}
+
+h3 {
+    font-size: calc(12px + 0.5vw);
+}
+
+
+/*grid template assignation*/
+#row1 {
+    grid-area: r1;
+}
+
+#row2 {
+    grid-area: r2;
+}
+
+#row3 {
+    grid-area: r3;
+}
+
+#row4 {
+    grid-area: r4;
+}
+
+
+.container {
+    background: rgb(225, 210, 235);
+    background: linear-gradient(90deg, rgba(225, 210, 235, 1) 0%, rgba(193, 198, 228, 1) 100%);
+    border: 15px solid rgb(152, 158, 235);
+    border-radius: 10px;
+    width: 92%;
+    height: 85vh;
+    min-width: fit-content;
+    max-width: 92%;
+    margin: 2vw;
+    display: grid;
+    grid-template:
+
+        ".   r1  ." 25%
+        ".   r2  ." 25%
+        ".   r3  ." 25%
+        ".   r4  ." 25%/
+        1vw auto 2vw;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1%;
+
+}
+
+.type {
+    min-width: 10%;
+    max-width: 20%;
+    margin-right: 0px;
+    margin-left: 2vw;
+
+}
+
+.bar,
+.bar-filler {
+    height: 4vw;
+    min-height: 2.5vh;
+
+    border-radius: 100px;
+
+}
+
+.bar {
+    background-color: white;
+    min-width: 70%;
+    max-height: 4vw;
+    z-index: +1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bar-filler {
+    min-height: 100%;
+    max-width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: +2;
+    transition: width 0.5s
+}
+
+#bar1-filler {
+
+    background: rgb(255, 235, 160);
+    background: linear-gradient(90deg, rgba(255, 235, 160, 1) 0%, rgba(255, 138, 137, 1) 100%);
+    width: 0%;
+
+}
+
+#bar2-filler {
+
+    background: rgb(97, 239, 223);
+    background: linear-gradient(90deg, rgba(97, 239, 223, 1) 0%, rgba(106, 150, 247, 1) 100%);
+    width: 0%;
+}
+
+#bar3-filler {
+
+    background: rgb(109, 150, 250);
+    background: linear-gradient(90deg, rgba(109, 150, 250, 1) 0%, rgba(140, 107, 236, 1) 100%);
+    width: 0%;
+}
+
+#bar4-filler {
+
+    background: rgb(255, 199, 166);
+    background: linear-gradient(90deg, rgba(255, 199, 166, 1) 0%, rgba(250, 122, 151, 1) 100%);
+    width: 0%;
+}
+
+.animal-icon {
+    width: 7vw;
+    min-width: 4vw;
+    min-height: 4vw;
+
+    position: relative;
+    left: -3.5vw;
+
+    z-index: +3;
+    animation: rotate 0.5s linear infinite;
+}
+
+#rabbit-image {
+    width: 8vw;
+    position: relative;
+    top: -15%;
+    left:-4vw;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+.emoji {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 24%;
+    min-width: 24%;
+    width: 4vw;
+    min-height: 4vw;
+
+}
+
+
+
+.icon {
+    max-width: 70%;
+}
+
+.result-container {
+    text-align: center;
+}
+
+#thumbs-ammount,
+#hearts-ammount,
+#laughts-ammount,
+#jawdrops-ammount {
+
+    position: relative;
+    left: -0.8vw;
+
+}
+
