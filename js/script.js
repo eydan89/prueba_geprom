@@ -1,6 +1,8 @@
 
 window.onload = function () {
-  const URL = "https://corsproxy.io/?" + encodeURIComponent("https://demos.geprom.com/datos.php");;
+  
+  
+  const URL= "https://corsproxy.io/?" + encodeURIComponent("https://demos.geprom.com/datos.php");
 
   //declarar los divs de las cantidades
   const THUMBS_DIV = document.getElementById("thumbs-ammount");
@@ -8,8 +10,7 @@ window.onload = function () {
   const LAUGHTS_DIV = document.getElementById("laughts-ammount");
   const JAWDROPS_DIV = document.getElementById("jawdrops-ammount");
 
-  //declarar los divs de los bar-filler
-
+  //divs de los bar-filler
   const BAR1_FILLER = document.getElementById("bar1-filler");
   const BAR2_FILLER = document.getElementById("bar2-filler");
   const BAR3_FILLER = document.getElementById("bar3-filler");
@@ -22,6 +23,7 @@ window.onload = function () {
 
   let totalRespuestas;
 
+  
   //espera 0.5 segundos y realiza la primera llamada
   setTimeout(function () {
     getData(URL);
@@ -38,13 +40,14 @@ window.onload = function () {
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
-
+	
         let data = JSON.parse(xhr.responseText);
         treat(data)
 
       } else if (xhr.readyState == 4 && xhr.status != 200) {
 
         console.error('Error de respuesta en petición: ' + xhr.status);
+	
       }
     };
 
@@ -93,7 +96,7 @@ window.onload = function () {
 
 
 
-    /*comment this* 
+    /*percentage tracker uncomment to console log* 
     console.log(BAR1_FILLER.style.width)
     console.log(BAR2_FILLER.style.width)
     console.log(BAR3_FILLER.style.width)
