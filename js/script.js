@@ -102,7 +102,7 @@ window.onload = function () {
     console.log(BAR3_FILLER.style.width)
     console.log(BAR4_FILLER.style.width)
     console.log("--------------------")
-    */
+    
    
     //espera 3 segundos y llama recursivamente a getData(URL)
     setTimeout(function () {
