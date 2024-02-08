@@ -96,7 +96,7 @@ window.onload = function () {
 
 
 
-    /*percentage tracker uncomment to console log* 
+    
     console.log(BAR1_FILLER.style.width)
     console.log(BAR2_FILLER.style.width)
     console.log(BAR3_FILLER.style.width)
