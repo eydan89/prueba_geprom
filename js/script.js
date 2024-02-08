@@ -2,7 +2,7 @@
 window.onload = function () {
   
   
-  const URL= "https://demos.geprom.com/datos.php";
+  const URL= "https://api.codetabs.com/v1/proxy/?quest=https://demos.geprom.com/datos.php";
 
   //declarar los divs de las cantidades
   const THUMBS_DIV = document.getElementById("thumbs-ammount");
